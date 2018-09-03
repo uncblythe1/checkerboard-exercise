@@ -11,11 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.appendChild(tile);
     
 
-    if (i % 2 === 0) {
-        tile.style.backgroundColor = 'black';
-    } else {
-        tile.style.backgroundColor = 'red';
+    // if (i % 2 === 0) {
+    //     tile.style.backgroundColor = 'black';
+    // } else {
+    //     tile.style.backgroundColor = 'red';
+    // }
+
+    function randomColor() {
+        let a = Math.ceil(Math.random() * 255);
+        let b = Math.ceil(Math.random() * 255);
+        let c = Math.ceil(Math.random() * 255);
+        tile.style.backgroundColor = 'rgb('+a+','+b+','+c+')';
     }
+    window.setInterval(randomColor, 2000);
 
 }
 
